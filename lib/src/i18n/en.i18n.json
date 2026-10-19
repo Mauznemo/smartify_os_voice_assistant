@@ -1,0 +1,260 @@
+{
+  "voice_assistant": {
+    "title": "Voice assistant",
+    "app_title": "Ask",
+    "stop": "Stop"
+  },
+  "status": {
+    "getting_ready": "Getting ready",
+    "listening": "Listening",
+    "listening_hint": "Say what you want",
+    "understanding": "Understanding",
+    "thinking": "Thinking",
+    "asking_server": "Asking the AI server",
+    "speaking": "Answering",
+    "done": "Done"
+  },
+  "replies": {
+    "not_understood": "Sorry, I don't know how to help with that yet.",
+    "nothing_heard": "I didn't catch anything.",
+    "server_unreachable": "I couldn't reach the AI server, and I don't know that one myself.",
+    "model_missing": "I can't listen yet, the speech models still need downloading. You can do that in Settings, Voice assistant.",
+    "model_missing_opened": "I can't listen yet, the speech models still need downloading. I've opened the page for that.",
+    "no_microphone": "I can't get to the microphone.",
+    "something_went_wrong": "Sorry, something went wrong there.",
+    "volume_up": "I've turned it up a bit.",
+    "volume_down": "I've turned it down a bit.",
+    "unmuted": "The sound is back on.",
+    "time": "It's $time.",
+    "opening": "Sure, here's $name.",
+    "already_open": "$name is already open.",
+    "app_not_found": "I couldn't find an app called $name.",
+    "no_phone": "There's no phone connected for me to play from."
+  },
+  "commands": {
+    "volume_up": {
+      "title": "Turn the volume up",
+      "phrases": [
+        "louder",
+        "volume up",
+        "turn it up",
+        "turn the volume up",
+        "turn up the volume",
+        "increase the volume",
+        "raise the volume"
+      ]
+    },
+    "volume_down": {
+      "title": "Turn the volume down",
+      "phrases": [
+        "quieter",
+        "softer",
+        "volume down",
+        "turn it down",
+        "turn the volume down",
+        "turn down the volume",
+        "decrease the volume",
+        "lower the volume"
+      ]
+    },
+    "mute": {
+      "title": "Mute the sound",
+      "phrases": [
+        "mute",
+        "be quiet",
+        "silence",
+        "turn the sound off"
+      ]
+    },
+    "unmute": {
+      "title": "Turn the sound back on",
+      "phrases": [
+        "unmute",
+        "sound on",
+        "turn the sound on",
+        "turn the sound back on"
+      ]
+    },
+    "go_home": {
+      "title": "Go to the home screen",
+      "phrases": [
+        "go home",
+        "home screen",
+        "go to the home screen",
+        "back to the home screen"
+      ]
+    },
+    "open_app": {
+      "title": "Open an app",
+      "phrases": [
+        "open {app}",
+        "show {app}",
+        "start {app}",
+        "launch {app}",
+        "go to {app}"
+      ],
+      "app": "The name of the app, as it is written in the app list"
+    },
+    "play_music": {
+      "title": "Play the music",
+      "phrases": [
+        "play",
+        "play music",
+        "play the music",
+        "resume",
+        "continue playing"
+      ]
+    },
+    "pause_music": {
+      "title": "Pause the music",
+      "phrases": [
+        "pause",
+        "pause the music",
+        "stop the music",
+        "stop playing"
+      ]
+    },
+    "next_track": {
+      "title": "Skip to the next song",
+      "phrases": [
+        "next",
+        "next song",
+        "next track",
+        "skip",
+        "skip this song",
+        "skip the song"
+      ]
+    },
+    "previous_track": {
+      "title": "Go back to the previous song",
+      "phrases": [
+        "previous",
+        "previous song",
+        "previous track",
+        "last song",
+        "go back a song"
+      ]
+    },
+    "time": {
+      "title": "Say what time it is",
+      "phrases": [
+        "what time is it",
+        "what's the time",
+        "tell me the time",
+        "current time"
+      ]
+    },
+    "cancel": {
+      "title": "Close the assistant",
+      "phrases": [
+        "cancel",
+        "never mind",
+        "nevermind",
+        "forget it",
+        "nothing",
+        "stop"
+      ]
+    }
+  },
+  "settings": {
+    "setup": "Get ready to listen",
+    "setup_subtitle": "Download everything it needs in one go",
+    "setup_missing": "$size still to download",
+    "setup_ready": "Everything is downloaded. Press the button or say the wake word to start.",
+    "setup_needed": "Needed for what you picked",
+    "setup_download": "Download all ($size)",
+    "setup_cancel": "Stop downloading",
+    "setup_progress": "$done of $total",
+    "setup_failed": "Something didn't download. Check the connection and try again.",
+    "listening": "Listening",
+    "wake_word": "Wake word",
+    "wake_word_subtitle": "Say \"$phrase\" to start",
+    "wake_word_needs_model": "Download the wake word model first",
+    "sensitivity": "Wake word sensitivity",
+    "sensitivity_low": "Low",
+    "sensitivity_low_subtitle": "Starts less often by mistake",
+    "sensitivity_normal": "Normal",
+    "sensitivity_high": "High",
+    "sensitivity_high_subtitle": "Hears it from further away",
+    "recognition": "Speech recognition",
+    "recognizer": "Recognition model",
+    "answers": "Answers",
+    "speak_answers": "Answer out loud",
+    "voice": "Voice",
+    "voice_server": "Speech server",
+    "voice_server_subtitle": "Falls back to the voice on the car without a connection",
+    "ai": "AI server",
+    "use_ai": "Use the AI server",
+    "use_ai_subtitle": "Understands anything you say, needs a connection",
+    "commands": "What you can say",
+    "commands_subtitle": "Everything the assistant understands without a server",
+    "models": "Downloaded models",
+    "models_subtitle": "Download them once, and they work without a connection",
+    "download": "Download",
+    "downloading": "Downloading $percent%",
+    "downloaded": "Downloaded",
+    "not_downloaded": "Not downloaded",
+    "delete": "Delete",
+    "download_failed": "Download failed",
+    "in_use": "In use",
+    "size": "$size MB",
+    "kind_recognizer": "Speech recognition",
+    "kind_voice": "Voices",
+    "kind_wake_word": "Wake word",
+    "kind_voice_detection": "Voice detection",
+    "try_sentence": "Try a sentence",
+    "try_sentence_subtitle": "Runs it as if you had said it",
+    "debug_wake_word": "What it hears",
+    "debug_on": "Listening for \"$phrase\"",
+    "debug_off": "The wake word is off, only what you say is shown",
+    "debug_hint": "While this page is open, everything the microphone hears is written down here, and each time it heard the wake word.",
+    "debug_heard_wake_word": "Wake word, heard as \"$spelling\"",
+    "debug_nothing_yet": "Nothing heard yet. Say something.",
+    "debug_needs_model": "Download the speech models first"
+  },
+  "models": {
+    "parakeet_v3": "Parakeet",
+    "parakeet_v3_about": "Most accurate, 25 European languages",
+    "whisper_base": "Whisper base",
+    "whisper_base_about": "Good balance, almost every language",
+    "whisper_tiny": "Whisper tiny",
+    "whisper_tiny_about": "Fastest with many languages, less accurate",
+    "moonshine_base_en": "Moonshine",
+    "moonshine_base_en_about": "Fast and accurate, English only",
+    "moonshine_tiny_en": "Moonshine tiny",
+    "moonshine_tiny_en_about": "Fastest, English only",
+    "kokoro_fable": "Fable",
+    "kokoro_fable_about": "British English, natural sounding",
+    "piper_alan": "Alan",
+    "piper_alan_about": "British English, light enough for a Raspberry Pi",
+    "piper_thorsten": "Thorsten",
+    "piper_thorsten_about": "German",
+    "wake_word": "Wake word",
+    "wake_word_about": "Listens for the wake word, very small",
+    "voice_detection": "Voice detection",
+    "voice_detection_about": "Notices when you stop talking, very small"
+  },
+  "teach": {
+    "title": "Teach it your voice",
+    "subtitle": "Say the wake word a few times, and it learns how you say it",
+    "intro": "Say \"$phrase\" $count times, the way you would in the car, with a short pause after each. It works out how you say it and listens for that from then on.",
+    "start": "Start",
+    "again": "Teach it again",
+    "cancel": "Stop",
+    "say_it": "Say \"$phrase\"",
+    "recorded": "$done of $total",
+    "heard": "Heard \"$text\"",
+    "left_out": "Heard \"$text\", which doesn't sound like it. Try again.",
+    "working": "Working out how you say it",
+    "tried": "Tried $done of $total spellings",
+    "result": "It heard you $before of $total times before, and $after of $total times now.",
+    "learned": "What it learned",
+    "learned_heard": "Heard $count of $total",
+    "nothing_learned": "It already knew how you say it, so there was nothing new to learn.",
+    "forget": "Forget what it learned",
+    "forgotten": "It forgot what it learned.",
+    "needs_models": "Download the speech models and the wake word first, in Get ready to listen.",
+    "no_microphone": "It can't get to the microphone.",
+    "failed": "Something went wrong while working it out. Try again."
+  }
+}

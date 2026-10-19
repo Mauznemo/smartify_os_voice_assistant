@@ -1,0 +1,19 @@
+# Flutter/Dart/Pub related
+.dart_tool/
+.flutter-plugins-dependencies
+/build/
+/coverage/
+**/doc/api/
+# A package does not pin versions, the car's app does.
+/pubspec.lock
+/example/pubspec.lock
+/example/build/
+
+# Where your copy of SmartifyOS is. Made for you by the smartify-os CLI, and
+# different on every machine, so never shared.
+pubspec_overrides.yaml
+
+# Editors and systems
+.DS_Store
+.idea/
+*.iml

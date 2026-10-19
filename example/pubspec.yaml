@@ -1,0 +1,17 @@
+name: example
+description: "Runs SmartifyOS with Voice assistant on this computer, to try it out."
+publish_to: none
+
+environment:
+  sdk: ^3.10.3
+
+dependencies:
+  flutter:
+    sdk: flutter
+  smartify_os_core: any
+  # The extension in the folder above, exactly as it is right now.
+  smartify_os_voice_assistant:
+    path: ../
+
+flutter:
+  uses-material-design: true

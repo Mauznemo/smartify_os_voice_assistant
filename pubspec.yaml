@@ -1,0 +1,59 @@
+name: smartify_os_voice_assistant
+description: "A voice assistant for SmartifyOS that works without the internet: a wake word or a button, your own commands, and spoken answers."
+version: 0.1.0
+repository: https://github.com/Mauznemo/smartify_os_voice_assistant
+# GPL like SmartifyOS itself.
+license: GPL-3.0-or-later
+publish_to: none
+
+environment:
+  sdk: ^3.10.3
+  flutter: ">=3.38.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # The oldest SmartifyOS this works with: the first with floating panels,
+  # ducking and SmartifyOsSound.
+  smartify_os_core: ">=0.0.1"
+
+  # Packages SmartifyOS uses itself: the car's SmartifyOS picks the version.
+  flutter_riverpod: any
+  freezed_annotation: any
+  shared_preferences: any
+  slang: any
+  slang_flutter: any
+
+  # Listening, the wake word and the spoken answers, all on the car itself.
+  sherpa_onnx: ^1.13.8
+  # The microphone, on every platform. 6.x is the newest that works with the
+  # Flutter SmartifyOS supports.
+  record: ^6.2.1
+  # Where the downloaded speech models are kept.
+  path_provider: ^2.1.5
+  # Unpacking the wake word model, which only comes as a .tar.bz2.
+  archive: ^4.0.7
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+  build_runner: ^2.11.1
+  freezed: ^3.2.3
+
+flutter:
+  assets:
+    # The chimes when it starts and stops listening, see VoiceAssistantSounds.
+    - assets/sounds/
+
+# What the car needs installed on Linux. See "Linux packages" in EXTENSIONS.md
+# in the SmartifyOS repository.
+smartify_os:
+  linux:
+    run:
+      apt:
+        # The record package listens to the microphone through parecord,
+        # which talks to PipeWire's PulseAudio side.
+        - pulseaudio-utils
+        - pipewire-pulse

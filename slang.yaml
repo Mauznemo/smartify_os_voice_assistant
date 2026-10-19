@@ -1,0 +1,6 @@
+input_directory: lib/src/i18n
+input_file_pattern: .i18n.json
+
+# A string missing from another language shows in English instead of
+# breaking the build.
+fallback_strategy: base_locale
