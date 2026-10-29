@@ -1,0 +1,267 @@
+{
+  "folder": "voice_assistant/models",
+  "items": [
+    {
+      "id": "parakeet_v3",
+      "title": "Parakeet (speech recognition)",
+      "about": "Most accurate, 25 European languages",
+      "folder": "parakeet-tdt-0.6b-v3-int8",
+      "sizeMb": 670,
+      "default": [
+        "x64"
+      ],
+      "setting": "recognizer",
+      "value": "SpeechModels.parakeet",
+      "files": [
+        {
+          "url": "https://huggingface.co/csukuangfj/sherpa-onnx-nemo-parakeet-tdt-0.6b-v3-int8/resolve/main/encoder.int8.onnx",
+          "path": "encoder.int8.onnx"
+        },
+        {
+          "url": "https://huggingface.co/csukuangfj/sherpa-onnx-nemo-parakeet-tdt-0.6b-v3-int8/resolve/main/decoder.int8.onnx",
+          "path": "decoder.int8.onnx"
+        },
+        {
+          "url": "https://huggingface.co/csukuangfj/sherpa-onnx-nemo-parakeet-tdt-0.6b-v3-int8/resolve/main/joiner.int8.onnx",
+          "path": "joiner.int8.onnx"
+        },
+        {
+          "url": "https://huggingface.co/csukuangfj/sherpa-onnx-nemo-parakeet-tdt-0.6b-v3-int8/resolve/main/tokens.txt",
+          "path": "tokens.txt"
+        }
+      ]
+    },
+    {
+      "id": "whisper_base",
+      "title": "Whisper base (speech recognition)",
+      "about": "Good balance, almost every language",
+      "folder": "whisper-base",
+      "sizeMb": 160,
+      "default": [
+        "arm64"
+      ],
+      "setting": "recognizer",
+      "value": "SpeechModels.whisperBase",
+      "files": [
+        {
+          "url": "https://huggingface.co/csukuangfj/sherpa-onnx-whisper-base/resolve/main/base-encoder.int8.onnx",
+          "path": "base-encoder.int8.onnx"
+        },
+        {
+          "url": "https://huggingface.co/csukuangfj/sherpa-onnx-whisper-base/resolve/main/base-decoder.int8.onnx",
+          "path": "base-decoder.int8.onnx"
+        },
+        {
+          "url": "https://huggingface.co/csukuangfj/sherpa-onnx-whisper-base/resolve/main/base-tokens.txt",
+          "path": "base-tokens.txt"
+        }
+      ]
+    },
+    {
+      "id": "whisper_tiny",
+      "title": "Whisper tiny (speech recognition)",
+      "about": "Fastest with many languages, less accurate",
+      "folder": "whisper-tiny",
+      "sizeMb": 105,
+      "setting": "recognizer",
+      "value": "SpeechModels.whisperTiny",
+      "files": [
+        {
+          "url": "https://huggingface.co/csukuangfj/sherpa-onnx-whisper-tiny/resolve/main/tiny-encoder.int8.onnx",
+          "path": "tiny-encoder.int8.onnx"
+        },
+        {
+          "url": "https://huggingface.co/csukuangfj/sherpa-onnx-whisper-tiny/resolve/main/tiny-decoder.int8.onnx",
+          "path": "tiny-decoder.int8.onnx"
+        },
+        {
+          "url": "https://huggingface.co/csukuangfj/sherpa-onnx-whisper-tiny/resolve/main/tiny-tokens.txt",
+          "path": "tiny-tokens.txt"
+        }
+      ]
+    },
+    {
+      "id": "moonshine_base_en",
+      "title": "Moonshine (speech recognition)",
+      "about": "Fast and accurate, English only",
+      "folder": "moonshine-base-en-int8",
+      "sizeMb": 290,
+      "setting": "recognizer",
+      "value": "SpeechModels.moonshineBase",
+      "files": [
+        {
+          "url": "https://huggingface.co/csukuangfj/sherpa-onnx-moonshine-base-en-int8/resolve/main/preprocess.onnx",
+          "path": "preprocess.onnx"
+        },
+        {
+          "url": "https://huggingface.co/csukuangfj/sherpa-onnx-moonshine-base-en-int8/resolve/main/encode.int8.onnx",
+          "path": "encode.int8.onnx"
+        },
+        {
+          "url": "https://huggingface.co/csukuangfj/sherpa-onnx-moonshine-base-en-int8/resolve/main/uncached_decode.int8.onnx",
+          "path": "uncached_decode.int8.onnx"
+        },
+        {
+          "url": "https://huggingface.co/csukuangfj/sherpa-onnx-moonshine-base-en-int8/resolve/main/cached_decode.int8.onnx",
+          "path": "cached_decode.int8.onnx"
+        },
+        {
+          "url": "https://huggingface.co/csukuangfj/sherpa-onnx-moonshine-base-en-int8/resolve/main/tokens.txt",
+          "path": "tokens.txt"
+        }
+      ]
+    },
+    {
+      "id": "moonshine_tiny_en",
+      "title": "Moonshine tiny (speech recognition)",
+      "about": "Fastest, English only",
+      "folder": "moonshine-tiny-en-int8",
+      "sizeMb": 125,
+      "setting": "recognizer",
+      "value": "SpeechModels.moonshineTiny",
+      "files": [
+        {
+          "url": "https://huggingface.co/csukuangfj/sherpa-onnx-moonshine-tiny-en-int8/resolve/main/preprocess.onnx",
+          "path": "preprocess.onnx"
+        },
+        {
+          "url": "https://huggingface.co/csukuangfj/sherpa-onnx-moonshine-tiny-en-int8/resolve/main/encode.int8.onnx",
+          "path": "encode.int8.onnx"
+        },
+        {
+          "url": "https://huggingface.co/csukuangfj/sherpa-onnx-moonshine-tiny-en-int8/resolve/main/uncached_decode.int8.onnx",
+          "path": "uncached_decode.int8.onnx"
+        },
+        {
+          "url": "https://huggingface.co/csukuangfj/sherpa-onnx-moonshine-tiny-en-int8/resolve/main/cached_decode.int8.onnx",
+          "path": "cached_decode.int8.onnx"
+        },
+        {
+          "url": "https://huggingface.co/csukuangfj/sherpa-onnx-moonshine-tiny-en-int8/resolve/main/tokens.txt",
+          "path": "tokens.txt"
+        }
+      ]
+    },
+    {
+      "id": "kokoro_fable",
+      "title": "Fable (voice)",
+      "about": "British English, natural sounding",
+      "folder": "kokoro-multi-lang-v1_0",
+      "sizeMb": 390,
+      "default": [
+        "x64"
+      ],
+      "setting": "voices",
+      "value": "SpeechModels.kokoroFable",
+      "files": [
+        {
+          "url": "https://huggingface.co/csukuangfj/kokoro-multi-lang-v1_0/resolve/main/model.onnx",
+          "path": "model.onnx"
+        },
+        {
+          "url": "https://huggingface.co/csukuangfj/kokoro-multi-lang-v1_0/resolve/main/voices.bin",
+          "path": "voices.bin"
+        },
+        {
+          "url": "https://huggingface.co/csukuangfj/kokoro-multi-lang-v1_0/resolve/main/tokens.txt",
+          "path": "tokens.txt"
+        },
+        {
+          "url": "https://huggingface.co/csukuangfj/kokoro-multi-lang-v1_0/resolve/main/lexicon-gb-en.txt",
+          "path": "lexicon-gb-en.txt"
+        },
+        {
+          "huggingFace": "csukuangfj/kokoro-multi-lang-v1_0",
+          "folder": "espeak-ng-data"
+        },
+        {
+          "huggingFace": "csukuangfj/kokoro-multi-lang-v1_0",
+          "folder": "dict"
+        }
+      ]
+    },
+    {
+      "id": "piper_alan",
+      "title": "Alan (voice)",
+      "about": "British English, light enough for a Raspberry Pi",
+      "folder": "vits-piper-en_GB-alan-medium",
+      "sizeMb": 81,
+      "default": [
+        "arm64"
+      ],
+      "setting": "voices",
+      "value": "SpeechModels.piperAlan",
+      "files": [
+        {
+          "url": "https://huggingface.co/csukuangfj/vits-piper-en_GB-alan-medium/resolve/main/en_GB-alan-medium.onnx",
+          "path": "en_GB-alan-medium.onnx"
+        },
+        {
+          "url": "https://huggingface.co/csukuangfj/vits-piper-en_GB-alan-medium/resolve/main/tokens.txt",
+          "path": "tokens.txt"
+        },
+        {
+          "huggingFace": "csukuangfj/vits-piper-en_GB-alan-medium",
+          "folder": "espeak-ng-data"
+        }
+      ]
+    },
+    {
+      "id": "piper_thorsten",
+      "title": "Thorsten (voice)",
+      "about": "German",
+      "folder": "vits-piper-de_DE-thorsten-medium",
+      "sizeMb": 81,
+      "setting": "voices",
+      "value": "SpeechModels.piperThorsten",
+      "files": [
+        {
+          "url": "https://huggingface.co/csukuangfj/vits-piper-de_DE-thorsten-medium/resolve/main/de_DE-thorsten-medium.onnx",
+          "path": "de_DE-thorsten-medium.onnx"
+        },
+        {
+          "url": "https://huggingface.co/csukuangfj/vits-piper-de_DE-thorsten-medium/resolve/main/tokens.txt",
+          "path": "tokens.txt"
+        },
+        {
+          "huggingFace": "csukuangfj/vits-piper-de_DE-thorsten-medium",
+          "folder": "espeak-ng-data"
+        }
+      ]
+    },
+    {
+      "id": "wake_word",
+      "title": "Wake word",
+      "about": "Listens for the wake word, very small",
+      "folder": "kws-zipformer-gigaspeech-3.3M",
+      "sizeMb": 6,
+      "required": true,
+      "files": [
+        {
+          "archive": "https://github.com/k2-fsa/sherpa-onnx/releases/download/kws-models/sherpa-onnx-kws-zipformer-gigaspeech-3.3M-2024-01-01.tar.bz2",
+          "keep": {
+            "sherpa-onnx-kws-zipformer-gigaspeech-3.3M-2024-01-01/encoder-epoch-12-avg-2-chunk-16-left-64.int8.onnx": "encoder.int8.onnx",
+            "sherpa-onnx-kws-zipformer-gigaspeech-3.3M-2024-01-01/decoder-epoch-12-avg-2-chunk-16-left-64.int8.onnx": "decoder.int8.onnx",
+            "sherpa-onnx-kws-zipformer-gigaspeech-3.3M-2024-01-01/joiner-epoch-12-avg-2-chunk-16-left-64.int8.onnx": "joiner.int8.onnx",
+            "sherpa-onnx-kws-zipformer-gigaspeech-3.3M-2024-01-01/tokens.txt": "tokens.txt",
+            "sherpa-onnx-kws-zipformer-gigaspeech-3.3M-2024-01-01/bpe.model": "bpe.model"
+          }
+        }
+      ]
+    },
+    {
+      "id": "voice_detection",
+      "title": "Voice detection",
+      "about": "Notices when you stop talking, very small",
+      "folder": "silero-vad",
+      "sizeMb": 1,
+      "required": true,
+      "files": [
+        {
+          "url": "https://github.com/k2-fsa/sherpa-onnx/releases/download/asr-models/silero_vad.onnx",
+          "path": "silero_vad.onnx"
+        }
+      ]
+    }
+  ]
+}

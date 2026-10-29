@@ -1,3 +1,6 @@
+import 'dart:ffi' show Abi;
+
+import 'package:flutter/foundation.dart';
 import 'package:smartify_os_voice_assistant/src/services/voice_assistant/speech_models/models/speech_model.dart';
 
 /// The speech models the voice assistant can download and run, all on the
@@ -15,6 +18,10 @@ import 'package:smartify_os_voice_assistant/src/services/voice_assistant/speech_
 /// | [moonshineTiny] | fastest | good | English | 125 MB |
 ///
 /// The voices answer in one language each. [voices] has them all.
+///
+/// Until the app or the driver picks one, a car understands with [parakeet] and answers in
+/// English with [kokoroFable], and on a Raspberry Pi (Linux on ARM) with the lighter
+/// [whisperBase] and [piperAlan], see [defaultRecognizer] and [voicesInOrder].
 abstract final class SpeechModels {
   static const _hf = 'https://huggingface.co/csukuangfj';
   static const _releases =
@@ -263,4 +270,28 @@ abstract final class SpeechModels {
 
   /// Everything above.
   static final all = [...recognizers, ...voices, wakeWord, voiceDetection];
+
+  /// Internal: whether this car is a Raspberry Pi or another ARM board running
+  /// Linux, where [parakeet] understands slowly and [kokoroFable] takes
+  /// longer to speak than the answer lasts. A Mac or a tablet on ARM is fast
+  /// enough for both.
+  @visibleForTesting
+  static bool? lightweightForTesting;
+
+  static bool get _lightweight =>
+      lightweightForTesting ?? Abi.current() == Abi.linuxArm64;
+
+  /// The recognizer a car uses until the app or the driver picks another:
+  /// [parakeet], or [whisperBase] on a Raspberry Pi.
+  static SpeechModel get defaultRecognizer =>
+      _lightweight ? whisperBase : parakeet;
+
+  /// Every voice, in the order one is picked for a language until the driver
+  /// picks another: on a Raspberry Pi the light Piper voices come first.
+  static List<SpeechModel> get voicesInOrder => _lightweight
+      ? [
+          ...voices.where((voice) => voice.engine != SpeechEngine.kokoro),
+          ...voices.where((voice) => voice.engine == SpeechEngine.kokoro),
+        ]
+      : voices;
 }

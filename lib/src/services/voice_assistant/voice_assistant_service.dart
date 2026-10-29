@@ -723,7 +723,9 @@ class VoiceAssistantService {
   /// Every voice the driver can pick from for [languageCode].
   List<SpeechModel> voiceModelsFor(String languageCode) => {
     if (_setup.voices[languageCode] case final SpeechModel voice) voice,
-    ...SpeechModels.voices.where((voice) => voice.supports(languageCode)),
+    ...SpeechModels.voicesInOrder.where(
+      (voice) => voice.supports(languageCode),
+    ),
   }.toList();
 
   /// The voice that answers in [languageCode]: the driver's pick, the car's,

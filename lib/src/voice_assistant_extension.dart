@@ -82,7 +82,8 @@ class VoiceAssistantExtension extends SmartifyOsExtension {
   final bool wakeWordOnByDefault;
 
   /// The speech model that understands what is said, until the driver picks
-  /// another in Settings. See `SpeechModels` for how they compare.
+  /// another in Settings: Parakeet, or Whisper base on a Raspberry Pi, unless
+  /// you pick one here. See `SpeechModels` for how they compare.
   final SpeechModel recognizer;
 
   /// The voice to answer with in each language, by two letter code, in
@@ -142,7 +143,7 @@ class VoiceAssistantExtension extends SmartifyOsExtension {
     this.listeningSound = VoiceAssistantSounds.listening,
     this.heardSound = VoiceAssistantSounds.heard,
     this.nothingHeardSound = VoiceAssistantSounds.nothingHeard,
-  }) : recognizer = recognizer ?? SpeechModels.parakeet;
+  }) : recognizer = recognizer ?? SpeechModels.defaultRecognizer;
 
   @override
   String get id => 'voice_assistant';

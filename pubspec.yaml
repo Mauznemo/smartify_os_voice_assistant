@@ -57,3 +57,13 @@ smartify_os:
         # which talks to PipeWire's PulseAudio side.
         - pulseaudio-utils
         - pipewire-pulse
+  # What the car's app needs on Android, written into its android/ folder by
+  # the CLI.
+  android:
+    permissions:
+      # Listening, through the record package.
+      - android.permission.RECORD_AUDIO
+  # The speech models, which the CLI can put on a car with its app, since a
+  # car often has no internet to download them in Settings. Written by
+  # test/downloads_test.dart from SpeechModels, so the two never drift apart.
+  downloads: smartify_os_downloads.json

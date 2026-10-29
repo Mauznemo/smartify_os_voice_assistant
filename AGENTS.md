@@ -67,9 +67,10 @@ Things that are easy to break and do not show until someone talks to a car:
   English ones are always added next to the car's language.
 - **Models live in one folder per model**, which only exists once complete (downloads
   go into `<folder>.part`). On Linux that is `~/.local/share/smartify-os/voice_assistant/models`
-  whatever the app is called, because the smartify-os CLI puts models there too
-  (`cli_requests/voice_assistant_models.md` in the SmartifyOS repository). Changing a
-  model's folder or files changes what the CLI has to download.
+  whatever the app is called, because the smartify-os CLI puts models there too, from
+  `smartify_os_downloads.json`. `test/downloads_test.dart` writes that file from
+  `SpeechModels` (and fails until the new one is committed), so add every new model to
+  its `_written` map, and to `_defaults` when it should go on a car unasked.
 - **Kokoro is the full precision model on purpose**: the int8 one took more than twice as
   long to speak on ARM. Every new model gets tried for real before it goes in the
   catalog: download it, load it in the worker, and run a sentence through it.
@@ -195,6 +196,20 @@ distribution only). Never tell the owner to install something by hand instead.
   harmless ones (`plugdev`, `dialout`, `input`, `video`, ...).
 - Passwordless `sudo` is already set up on every car; `SmartifyOsShell` with
   `elevated: true` uses it. Never list anything for it.
+
+## Android and downloads
+
+- **What the car's Android project needs** goes under `smartify_os: android:` in
+  `pubspec.yaml`, and the CLI writes it into the car's `android/` folder: `minSdk` (an API
+  level, only when something needs more than Flutter's own) and `permissions` the code asks
+  the driver for (`android.permission.RECORD_AUDIO`). Never tell the owner to edit
+  `android/` by hand.
+- **Anything big downloaded onto the car** (models, maps) is listed in a JSON file named by
+  `smartify_os: downloads:`, so the CLI can put it on the car with the app (the format is
+  "Downloads" in EXTENSIONS.md). Each item is a folder of its own under
+  `smartify-os/<id>/...` in the data folder (`~/.local/share` on Linux), made complete as
+  `<folder>.part` and renamed, and a folder that is there is treated as whole. When the
+  same list is in the code, a test writes the file from it.
 
 ## Style
 
